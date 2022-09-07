@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCD-Game (Find Missing Letter)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main heading -->
+    <div class="main_heading_centre">
+
+        <button id="new_info_tab" onclick="window.open('new.html' ,'' , 'height=200px , width=400px , scrollbar=no ')" >Info</button>
+
+        <div class="main_heading">ABCD-Game (Find Missing Letter)</div>     
+
+        
+        
+
+    </div>
+    
+
+
+
+
+    <!-- For input and result and timer -->
+    <div   class="input_time">
+
+
+        <div id="inp_sub_image"  class="inp_sub sec_tab">
+           
+            <input id="inpt" type="text"><button id="sub_btn" onclick="submit()" >Submit</button> <span id="timer">10</span>
+
+        </div>
+
+
+        <div class="start sec_tab"> 
+
+            <button id="b1" onclick="start()" >Start</button>
+            
+            <button id="b2" onclick="refresh()">Refresh</button>
+
+        </div>
+
+
+
+        <div class="res_pic sec_tab">
+       
+            
+            <img id="r" src="right-icon-2.jpg" alt="" >
+
+        
+        
+        
+            <img id="w" src="wrong_icon.png" alt="" >
+        
+
+        </div>
+
+        <div  class="res_lett sec_tab ">
+
+            <div id="result" class="lett"></div>
+
+        </div>
+
+
+       
+
+
+
+    </div>
+
+
+
+    <!-- For all letters -->
+    <div class="letters">
+
+      
+
+        <div class="first_line">
+
+            
+            <div class="lett" id="1">A</div>
+            <div class="lett" id="2">B</div>
+            <div class="lett" id="3">C</div>
+            <div class="lett" id="4">D</div>
+            <div class="lett" id="5">E</div>
+            <div class="lett" id="6">F</div>
+
+
+       
+            
+            <div class="lett" id="7">G</div>
+            <div class="lett" id="8">H</div>
+            <div class="lett" id="9">I</div>
+            <div class="lett" id="10">J</div>
+            <div class="lett" id="11">K</div>
+            <div class="lett" id="12">L</div>
+
+
+       
+
+            
+            <div class="lett" id="13">M</div>
+            <div class="lett" id="14">N</div>
+            <div class="lett" id="15">O</div>
+            <div class="lett" id="16">P</div>
+            <div class="lett" id="17">Q</div>
+            <div class="lett" id="18">R</div>
+
+
+      
+
+            
+            <div class="lett" id="19">S</div>
+            <div class="lett" id="20">T</div>
+            <div class="lett" id="21">U</div>
+            <div class="lett" id="22">V</div>
+            <div class="lett" id="23">W</div>
+            <div class="lett" id="24">X</div>
+
+
+        
+
+            
+            <div class="lett trans"></div>
+            <div class="lett trans"></div>
+            <div class="lett" id="25">Y</div>
+            <div class="lett" id="26">Z</div>
+            <div class="lett trans"></div>
+            <div class="lett trans"></div>
+            
+
+
+        </div>
+
+    
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
