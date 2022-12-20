@@ -15,9 +15,6 @@ t=parseInt(t)
 
 function ti(){
 
-
-    
-
     var lesser = setInterval(() => {
         
         if (t <= 0){
@@ -34,7 +31,6 @@ function ti(){
             document.getElementById("timer").innerHTML=t
         }else {
             document.getElementById("timer").innerText="0"+t
-        
         }
 
         t -= 1
@@ -62,11 +58,15 @@ function refresh(){
 
 }
 
-
+// // Below var created to fix bug (Bug is submite before start , so we don't want this)
+let startAtLeastOnce = 0
 
 function start(){
     document.getElementById(ren).style.display="none";
     // console.log(r)
+
+    startAtLeastOnce++
+
     ti()
     // refresh()
 
@@ -75,7 +75,8 @@ function start(){
 
 function submit(){
 
-    let put = document.getElementById("inpt").value;
+
+  if(startAtLeastOnce > 0){  let put = document.getElementById("inpt").value;
     
 
     put = put.toUpperCase()
@@ -101,9 +102,14 @@ function submit(){
         document.getElementById("result").innerHTML=val;
 
        
-    }
+    }}
+
+
 
 }
+
+
+
 
 
 
