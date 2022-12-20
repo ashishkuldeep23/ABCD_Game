@@ -7,8 +7,8 @@
 
 
 .main_heading_centre{
+    height: 13vh;
 
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
 
 
 .input_time{
-    height: 16.5vh;
+    height: 20.5vh;
     width: 100%;
     /* border:  2px solid red; */
     
@@ -167,8 +167,8 @@
     justify-content: center;
     /* align-items: center; */
 
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
 }
 
 
