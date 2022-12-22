@@ -1,5 +1,6 @@
 
 
+
 var ren = Math.floor(Math.random() * 26+1);
 // alert(r)
 
@@ -13,7 +14,7 @@ t=parseInt(t)
 
 // alert(typeof(t))
 
-function ti(){
+function timer(){
 
     var lesser = setInterval(() => {
         
@@ -23,6 +24,16 @@ function ti(){
             game_over()
       
             document.getElementById("result").innerHTML=val
+
+            // For innerText and style when timer end ---->
+            
+            let displayDiv = document.getElementById("result_Img_div")
+
+            displayDiv.style.backgroundColor = "Cyan"
+            displayDiv.style.fontSize = "30px"
+            displayDiv.style.display = "flex"
+            displayDiv.style.textAlign = "Centre"
+            displayDiv.innerHTML = "Try Again Please"
           
         
         }
@@ -67,8 +78,16 @@ function start(){
 
     startAtLeastOnce++
 
-    ti()
+    timer()
     // refresh()
+
+    // // Using same btn for start and refresh --->
+    document.getElementById("b1").innerHTML  = "Refresh"
+
+    if(startAtLeastOnce > 1 ){
+        refresh()
+    }
+    
 
 }
 
@@ -76,8 +95,9 @@ function start(){
 function submit(){
 
 
-  if(startAtLeastOnce > 0){  let put = document.getElementById("inpt").value;
+  if(startAtLeastOnce > 0){
     
+    let put = document.getElementById("inpt").value;
 
     put = put.toUpperCase()
 
