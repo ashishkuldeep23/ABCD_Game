@@ -33,7 +33,7 @@ function timer(){
             displayDiv.style.fontSize = "30px"
             displayDiv.style.display = "flex"
             displayDiv.style.textAlign = "Centre"
-            displayDiv.innerHTML = "Try Again Please"
+            displayDiv.innerHTML = "Please Try Again"
           
         
         }
