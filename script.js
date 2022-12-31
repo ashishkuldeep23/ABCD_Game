@@ -13,6 +13,9 @@ t=parseInt(t)
 
 // alert(typeof(t))
 
+// // // Sound play and pause in js ------>
+let sound = new Audio("timer.mp3")
+
 function timer(){
 
     var lesser = setInterval(() => {
@@ -32,18 +35,21 @@ function timer(){
             displayDiv.style.fontSize = "30px"
             displayDiv.style.display = "flex"
             displayDiv.style.textAlign = "Centre"
-            displayDiv.innerHTML = "Try Again Please"
+            displayDiv.innerHTML = "Please Try Again"
           
         
-        }
+        }else{
 
-        if( t >= 10){
-            document.getElementById("timer").innerHTML=t
-        }else {
-            document.getElementById("timer").innerText="0"+t
+            sound.play()
+  
+            if( t >= 10){
+                document.getElementById("timer").innerHTML=t
+            }else {
+                document.getElementById("timer").innerText="0"+t
+            }
+            
+            t -= 1
         }
-
-        t -= 1
 
     }, 1000);
 
@@ -51,6 +57,7 @@ function timer(){
 
 
 function game_over(){
+    sound.pause()
     document.getElementById("timer").style.display="none";
     document.getElementById("inp_sub_image").innerHTML="<b>GAME OVER</b>";
 };
