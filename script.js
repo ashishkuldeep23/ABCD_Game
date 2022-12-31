@@ -14,7 +14,7 @@ t=parseInt(t)
 // alert(typeof(t))
 
 // // // Sound play and pause in js ------>
-let sound = new Audio("timer.mp3")
+let sound = new Audio("./timer.mp3")
 
 function timer(){
 
